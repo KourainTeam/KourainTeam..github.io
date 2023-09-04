@@ -1,336 +1,85 @@
-<!-- Trong đoạn Code này, bạn có thể thay đổi các chi tiết (tên riêng của bạn, nội dung của bạn), nhưng không làm thay đổi cấu trúc cơ bản! -->
-
-<aside class="profile-card">
-  
-  <header>
-      <style>
-        /* Code CSS cho Profile Card */
-        
-        /************
-        * Imports 
-        *************/
-        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
-        
-        /************
-        * Variables 
-        *************/
-        
-        /* Colors */
-        $white :  #FFFFFF;
-        $red   :  #D72B37;
-        $gray  :  #2D2D2D;
-        
-        /* Layout */
-        $width :  350px;
-        
-        /************
-        * Mixins
-        *************/
-        @mixin border-shadow-box($w,$h,$border-radius,$background-color,$padding) {
-          width: $w;
-          height: $h;
-          border-radius: $border-radius;
-          background-color: $background-color;
-          padding: $padding;
-          box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.1);
-          margin: 0 auto;
-        }
-        /************
-        * Styles
-        *************/
-        
-        body{
-          background-image: url(https://farm5.staticflickr.com/4171/34814741935_cb292e2490_o.png); 
-          font-smoothing: antialiased;
-          font-family: Roboto,sans-serif; 
-        }
-        
-        .profile-social-links, .profile-bio {
-          transition: height 1s ease-in;
-        }
-        
-        aside{
-          width: $width;
-          height: 100%;
-          margin: 110px auto 0 auto;
-          header{
-            height: 200px;
-            a{
-              opacity: 0;
-              width: 100%;
-              height: auto;
-              display: inline-block;
-              animation: opacity-translate 1s ease-out 3.2s forwards;
-              img { 
-                padding: 10px;
-                width: 60%;
-                height: auto;
-                margin: 4% 18%;
-                border-radius: 50%;
-                background: $red;
-              } 
-            }
-            h1{
-              opacity: 0;
-              color: $gray;
-              transform: translate3d(0,-160px,0);
-              text-align: center;
-              animation: fade .5s ease-out 4.5s forwards;
-            }
-            h2{
-              opacity: 0;
-              color: $gray;
-              transform: translate3d(0,-172px,0);
-              text-align: center;
-              font-size: 17px;
-              font-weight: 300;
-              animation: fade .5s ease-out 5s forwards;
-            }
-            &:before{
-              content: "Hi!";
-              color:$white;
-              text-align: center;
-              width: 100px;
-              height: 100px;
-              margin-top: 25px;
-              font-size: 40px;
-              display: block;
-              opacity: 0;
-              animation: hi 2.9s cubic-bezier(1,.15,.96,.95) forwards;
-            }
-            @include border-shadow-box(0px,0px,50px,$red,0px);
-            position: relative;
-            z-index: 5;
-            transform: translate3d(0,100x,0);
-            animation: grow 3s cubic-bezier(.88,.32,.81,.96) forwards;
-          }
-          .profile-bio {
-            @include border-shadow-box(310px,'auto',10px, $white,20px);
-            color: $gray;
-            opacity:0;
-            transform: translate3d(0,-60px,0);
-            transition: opacity .7s ease-out , transform .4s ease-in;
-            z-index: 1;
-          } 
-          .profile-social-links {
-            position:absolute;
-            height: 50px;
-            top: 28px;
-            opacity: 1;
-            li{
-              @include border-shadow-box(60px,60px,60px,$white,0px);
-              display: inline-block;
-              text-align: center;
-              margin: 0 13px;
-              opacity:0;
-              img{
-                width: 60%;
-                margin: 19% auto;
-                height: auto;
-              }
-              &:nth-child(1){
-                transform: translate3d(100px,150px, 0);
-                animation: translate-social-1 .3s ease-out 5.8s forwards;
-              }
-              &:nth-child(2){
-                transform: translate3d(0px,150px, 0);
-                animation: translate-social-2 .3s ease-out 6s forwards;
-              }
-              &:nth-child(3){
-                transform: translate3d(-100px,150px, 0);
-                animation: translate-social-3 .3s ease-out 6.2s forwards;
-              }
-            }
-          }
-          &:hover{
-            .profile-bio{
-              opacity:1;
-              transform: translate3d(0,170px,0);
-            }
-          }
-        }
-        
-        
-        /************
-        * Animations
-        *************/
-        
-        @keyframes translate-social-1{
-          to{
-            opacity:    1;
-            transform:  translate3d(-23px, 80px, 0);
-          }
-        }
-        
-        @keyframes translate-social-2{
-          to{
-            opacity:    1;
-            transform:  translate3d(0px, 30px, 0);
-          }
-        }
-        
-        @keyframes translate-social-3{
-          to{
-            opacity:    1;
-            transform:  translate3d(31px, 80px, 0);
-          }
-        }
-        
-        @keyframes hi{
-          0%{
-            opacity:    0;
-          }
-          5%{
-            opacity:    1;
-          }
-          60%{
-            opacity:    0;
-          }
-          99%{
-            height:     100px;
-            margin-top: 25px;
-          }
-          100%{
-            height:     0px;
-            margin-top: 0px;
-          }
-        }
-        
-        @keyframes opacity-translate{
-          0%{
-            opacity:    0;
-            transform:  translate3d(0,0,0);
-          }
-          100%{
-            opacity:    1;
-            transform:  translate3d(0,-130px,0);
-          }
-        }
-        
-        @keyframes fade{
-          0%{
-            opacity:  0;
-          }
-          100%{
-            opacity:  1;
-          }
-        }
-        
-        @keyframes shake{
-          0%{
-            transform: translate3d( -1px, 1px, 0), rotate(10deg);
-          }
-          100%{
-            transform: translate3d( 1px, -1px, 0), rotate(-10deg);
-          }
-        }
-        
-        @keyframes grow{
-          0%{
-            opacity:        0;
-            width:          0px; 
-            height:         0px;
-            border-radius:  50px;
-          }
-          15%{
-            opacity:        1;
-            width:          100px; 
-            height:         100px;
-            padding:        10px;
-            border-radius:  100px;
-          }
-          20%{
-            transform:      translate3d(0,150%,0);
-          }
-          24%{
-            transform:      translate3d(0,155%,0);
-          }
-          28%{
-            transform:      translate3d(0,150%,0);
-          }  
-          32%{
-            transform:      translate3d(0,155%,0);
-          }  
-          34%{ 
-            transform:      translate3d(0,150%,0);
-          } 
-          38%{
-            transform:      translate3d(0,155%,0);
-          }    
-          42%{
-            transform:      translate3d(0,150%,0);
-          }   
-          70%{ 
-            width:          100px; 
-            height:         100px;
-            padding:        10px;
-            border-radius:  100px;
-            transform:      translate3d(0,150%,0);
-          }
-          75%{
-            width:            50px; 
-            height:           50px;
-            padding:          10px;
-            border-radius:    50px;
-            background-color: $red;
-          }
-          100%{
-            width:            $width;
-            height:           220px;
-            border-radius:    10px;
-            background-color: $white;
-            transform:        translate3d(0,70%,0);
-          }
-        }
-      </style>
-    <!-- day la avatar -->
-    <a href="http://laivanduc.vn">
-      <img src="https://farm5.staticflickr.com/4175/34651231232_b1a413839f_o.jpg">
-    </a>
-
-    <!-- ten cua ban -->
-    <h1>Lại Văn Đức</h1>
-    
-    <!-- Cong viec,nghe nghiep -->
-    <h2>Web Developer</h2>
-    
-  </header>
-  
-  <!-- Gioi thieu ve ban -->
-  <div class="profile-bio">
-    
-    <p> Tôi là một nhà phát triển web. Tôi chủ yếu làm việc với PHP, HTML, CSS, JS và WordPress trên ..<b> Internet.</b><br><br>
-      Tôi cũng làm việc tốt với Photoshop, Corel Draw, After Effects và vài thứ khác.</p>
-    
-  </div>
-  
-  <!-- Lien ket mang xa hoi cua ban-->
-  <ul class="profile-social-links">
-    
-    <!-- twitter  -->
-    <li>
-      <a href="https://twitter.com/">
-        <img src="https://farm5.staticflickr.com/4252/34651310252_2231b1385f_o.png">
-      </a>
-    </li>
-    
-    <!-- Dia chi google + cua ban -->
-    <li>
-      <a href="https://plus.google.com/u/0/118260931574775251745/posts">
-        <img src="https://farm5.staticflickr.com/4202/34004509073_6fc761b8e1_o.png">
-      </a>
-    </li>
-    
-    <!-- Dia chi Facebook cua ban-->
-    <li>
-      <a href="https://facebook.com">
-        <img src="https://farm5.staticflickr.com/4155/34774236796_cabfe4e288_o.png">
-      </a>
-    </li>
-    
-    <!-- Ban co the them hoac bot mang xa hoi tai day -->
-    
-  </ul>
-  
-</aside>
-<!-- Chi co vay thoi !-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile Card</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="card">
+			<div class="card__img">
+				<img src="aNam.jpg" alt="" />
+			</div>
+			<h2>Dinh Nam</h2>
+			<p>Fullstack Developer</p>
+			<div class="card__social">
+				<a target="_black" href="https://www.facebook.com/nam.nodemy">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a target="_black" href="https://www.youtube.com/c/Nodemy">
+					<i class="fab fa-youtube"></i>
+				</a>
+				<a target="_black" href="https://www.tiktok.com/@manindev">
+					<i class="fab fa-tiktok"></i>
+				</a>
+				<a target="_black" href="https://github.com/namndwebdev/html-css-js-thuc-chien">
+					<i class="fab fa-github"></i>
+				</a>
+			</div>
+			<button>Contact me</button>
+		</div>
+		<div class="card">
+			<div class="card__img">
+				<img src="aThai.jpg" alt="" />
+			</div>
+			<h2>Minh Thai</h2>
+			<p>Fullstack Developer</p>
+			<div class="card__social">
+				<a target="_black" href="https://www.facebook.com/minhthai.hoang.3">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a target="_black" href="https://www.youtube.com/c/Nodemy">
+					<i class="fab fa-youtube"></i>
+				</a>
+				<a target="_black" href="https://www.tiktok.com/@manindev">
+					<i class="fab fa-tiktok"></i>
+				</a>
+				<a target="_black" href="https://github.com/namndwebdev/html-css-js-thuc-chien">
+					<i class="fab fa-github"></i>
+				</a>
+			</div>
+			<button>Contact me</button>
+		</div>
+		<div class="card">
+			<div class="card__img">
+				<img src="Cuong.jpg" alt="" />
+			</div>
+			<h2>Cuong Nv</h2>
+			<p>Fullstack Developer</p>
+			<div class="card__social">
+				<a target="_black" href="https://www.facebook.com/CuongNv.2002/">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a target="_black" href="https://www.youtube.com/c/Nodemy">
+					<i class="fab fa-youtube"></i>
+				</a>
+				<a target="_black" href="https://www.tiktok.com/@manindev">
+					<i class="fab fa-tiktok"></i>
+				</a>
+				<a target="_black" href="https://github.com/namndwebdev/html-css-js-thuc-chien">
+					<i class="fab fa-github"></i>
+				</a>
+			</div>
+			<button>Contact me</button>
+		</div>
+	</body>
+</html>
