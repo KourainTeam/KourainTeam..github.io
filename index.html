@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="icon" type="image/png" href=",img/logo.png">
+	<link rel="icon" type="image/png" href=".img/logo.png">
 	<title>Kourain Profile</title>
 	<style>
 		h1 {
@@ -97,26 +97,31 @@
 			text-align: center;
 			color: black;
 		}
-
-		/* Thay đổi giao diện cho điện thoại di động */
-		@media (max-width: 480px) {
-			header > img {
-				width: 6em;
-				height: 6em;
-			}
-			header > h1 {
-				font-size: 1em;
-			}
-			ul {
-				padding: 1em;
-			}
-			ul > li {
-				margin: 0.5em 0;
-			}
-			a {
-				font-size: 16px;
-				padding: 3px;
-			}
+		@media screen and (max-width: 480px) {
+		  /* Các thuộc tính CSS áp dụng cho điện thoại */
+		  body {
+		    font-size: 18px;
+		  }
+		  header {
+		    margin-top: 2em;
+		  }
+		  img {
+		    width: 150px;
+		    height: 150px;
+		  }
+		  header > h1 {
+		    font-size: 1.5em;
+		  }
+		  ul {
+		    padding: 1em;
+		  }
+		  ul > li {
+		    margin: 0.5em 0;
+		  }
+		  a {
+		    font-size: 24px;
+		    padding: 8px;
+		  }
 		}
 	</style>
 </head>
