@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 :root {
-	--pink-color: #f2726a;
+	--pink-color: #D3D3D3;
 }
 
 * {
@@ -13,7 +13,7 @@
 
 body {
 	height: 100vh;
-	background: linear-gradient(45deg, #00853e, #50c878);
+	background-color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,7 +26,7 @@ body {
 	text-align: center;
 	background-color: #242628;
 	overflow: hidden;
-	margin: 0 30px;
+	margin: 120px 30px 0;
 }
 
 .card__img {
@@ -92,4 +92,38 @@ button {
 
 button:hover {
 	background-color: var(--pink-color);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+	flex-direction: column;
+}
+
+header > img {
+	width: 9em;
+	height: 9em;
+	border-radius: 100%;
+	border: 2px solid #D3D3D3;
+	box-shadow: #D3D3D3 0px 2px 8px 0px; 
+}
+
+header > h1 {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 1em;
+	background-color: #000 ;
+	color: white;
+	padding: 0.3em 0.6em;
+	border: 2px solid #fffa;
+	margin-top: 10px;
 }
