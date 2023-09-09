@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+	--pink-color: #D3D3D3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	background-image: url('img/BG.jpg');
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.card {
+	width: 325px;
+	height: 150px;
+	border-radius: 10px;
+	align-items: top;
+	text-align: center;
+	background-color: #242628;
+	overflow: hidden;
+	margin: 120px 30px 0;
+	margin-bottom: 20px;
+	display: flex;
+	flex-shrink: 10;
+	margin-left: 20px;
+	margin-top: 0px;
+}
+
+.card__img {
+	margin: 0 auto;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	transition: 0.25s;
+	transform: translateY(25px);
+	border-radius: 50%;
+	border: 4px solid var(--pink-color);
+	margin-right: 5px;
+}
+
+.card__img img {
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+h2 {
+	color: white;
+	margin-top: 40px;
+}
+
+p {
+	color: var(--pink-color);
+}
+
+header > img {
+	width: 9em;
+	height: 9em;
+	border-radius: 100%;
+	border: 2px solid #D3D3D3;
+	box-shadow: #D3D3D3 0px 2px 8px 0px; 
+}
+
+header > h1 {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 1em;
+	background-color: #000 ;
+	color: white;
+	padding: 0.3em 0.6em;
+	border: 2px solid #fffa;
+	margin-top: 10px;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0);
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+	flex-direction: column;
+}
+
+.card__social a {
+	text-decoration: none;
+	color: white;
+	margin: 25px 20px 40px;
+	font-size: 18px;
+	transition: 0.25s;
+	margin: 10px;
+	margin: 0 5px;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+
+.card__social a:hover {
+	color: var(--pink-color);
+}
+
+.card__content {
+  flex: 1;
+  text-align: left;
+  display: flex; /* Thêm dòng này */
+  justify-content: space-between; /* Thêm dòng này */
+  padding: 10px;
+}
+
+.card__social {
+  display: flex;
+  flex-direction: column; /* Thêm dòng này */
+  justify-content: center; /* Tùy chọn: căn giữa các phần tử trong .card__social */
+  align-items: center; /* Tùy chọn: căn giữa các phần tử trong .card__social */
+  margin-top: 0px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 120px;
+}
+
+.card-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 150px;
+}
+
+button {
+	display: block;
+	margin: 20px auto 0;
+	padding: 10px 20px;
+	background-color: transparent;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	border: 1px solid var(--pink-color);
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+button:hover {
+	background-color: var(--pink-color);
+}
