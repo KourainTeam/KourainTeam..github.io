@@ -36,6 +36,7 @@ body {
 	flex-shrink: 10;
 	margin-left: 20px;
 	margin-top: 0px;
+	transform: scale(3);
 }
 
 .card__img {
@@ -104,6 +105,7 @@ header {
 	align-items: center;
 	z-index: 999;
 	flex-direction: column;
+	transform: scale(3);
 }
 
 .card__social a {
