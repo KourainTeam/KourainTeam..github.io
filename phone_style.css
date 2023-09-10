@@ -166,6 +166,7 @@ button {
 	border: 1px solid var(--pink-color);
 	cursor: pointer;
 	transition: 0.25s;
+	transform: scale(3);
 }
 
 button:hover {
