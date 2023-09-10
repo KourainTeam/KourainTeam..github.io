@@ -36,7 +36,6 @@ body {
 	flex-shrink: 10;
 	margin-left: 20px;
 	margin-top: 0px;
-	transform: scale(3);
 }
 
 .card__img {
@@ -73,7 +72,7 @@ p {
 	color: var(--pink-color);
 }
 
-header > img {
+.header > img {
 	width: 9em;
 	height: 9em;
 	border-radius: 100%;
@@ -81,7 +80,7 @@ header > img {
 	box-shadow: #D3D3D3 0px 2px 8px 0px; 
 }
 
-header > h1 {
+.header > h1 {
 	display: inline-block;
 	font-size: 1.2em;
 	font-weight: bold;
@@ -93,9 +92,9 @@ header > h1 {
 	margin-top: 10px;
 }
 
-header {
+.header {
 	position: fixed;
-	top: 0;
+	top: (100vh - 3em);
 	left: 0;
 	right: 0;
 	background: rgba(0,0,0,0);
@@ -103,7 +102,6 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 999;
 	flex-direction: column;
 	transform: scale(3);
 }
@@ -149,10 +147,11 @@ header {
 }
 
 .card-container {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: calc((100vh - 3em) * 3);
+    transform: scale(3);
 }
 
 button {
@@ -166,7 +165,7 @@ button {
 	border: 1px solid var(--pink-color);
 	cursor: pointer;
 	transition: 0.25s;
-	transform: scale(3);
+
 }
 
 button:hover {
