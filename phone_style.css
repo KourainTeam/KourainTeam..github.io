@@ -38,7 +38,7 @@ body {
 }
 
 .card__img {
-	margin: 0 auto;
+	margin: 0;
 	justify-content: center;
 	width: 100px;
 	height: 100px;
@@ -47,7 +47,7 @@ body {
 	transform: translateY(25px);
 	border-radius: 50%;
 	border: 4px solid var(--pink-color);
-	margin-right: 5px;
+	margin-left: 5px;
 }
 
 .card__img img {
@@ -92,8 +92,8 @@ p {
 }
 
 .header {
-	position: fixed;
-	top: 50;
+	position: relative;
+	top: 150;
 	left: 0;
 	right: 0;
 	background: rgba(0,0,0,0);
@@ -102,17 +102,15 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	transform: scale(3);
+	transform: scale(2);
 }
 
 .card__social a {
 	text-decoration: none;
 	color: white;
-	margin: 25px 20px 40px;
+	margin: 0;
 	font-size: 18px;
 	transition: 0.25s;
-	margin: 10px;
-	margin: 0 5px;
 	display: flex;
 	justify-content: space-around;
 	margin-top: 10px;
@@ -150,7 +148,7 @@ p {
     justify-content: center;
     flex-direction: column;
     transform: scale(3);
-    margin-top: 100px;
+    margin-top: 500px;
 }
 
 button {
