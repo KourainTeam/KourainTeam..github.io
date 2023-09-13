@@ -93,7 +93,7 @@ p {
 
 .header {
 	position: relative;
-	top: 150;
+	top: 50;
 	left: 0;
 	right: 0;
 	background: rgba(0,0,0,0);
@@ -148,7 +148,7 @@ p {
     justify-content: center;
     flex-direction: column;
     transform: scale(3);
-    margin-top: 500px;
+    margin-top: 400px;
 }
 
 button {
