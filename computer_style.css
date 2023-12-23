@@ -86,7 +86,7 @@ button {
 	background-color: transparent;
 	border: 1px solid var(--pink-color);
 	padding: 10px 20px;
-	border-radius: inherit;
+	border-radius: 10px;
 	cursor: pointer;
 	transition: 0.25s;
 }
